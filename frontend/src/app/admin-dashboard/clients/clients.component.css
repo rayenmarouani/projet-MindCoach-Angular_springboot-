@@ -1,0 +1,7 @@
+.edit mat-icon {
+  color: green; 
+}
+button.mat-icon-button {
+  border: none;
+  box-shadow: none;
+}

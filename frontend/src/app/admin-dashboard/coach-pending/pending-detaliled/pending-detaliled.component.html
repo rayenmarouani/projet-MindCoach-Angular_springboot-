@@ -1,0 +1,66 @@
+<div style="margin-top: 80px;">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead class="table-light">
+                <tr>
+                  <th colspan="2" class="text-center">Pending Details</th>
+                </tr>
+              </thead>
+              <tbody *ngIf="pendingDetails">
+                <tr>
+                  <th scope="row">ID</th>
+                  <td>{{ pendingDetails.id }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Fullname</th>
+                  <td>{{ pendingDetails.username }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Email</th>
+                  <td>{{ pendingDetails.email }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Phone</th>
+                  <td>{{ pendingDetails.nbTel }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Expertise</th>
+                  <td>{{ pendingDetails.expertise }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Years of Experience</th>
+                  <td>{{ pendingDetails.yearsOfExperience }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Qualifications</th>
+                  <td>{{ pendingDetails.qualifications }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Motivation Message</th>
+                  <td>{{ pendingDetails.motivationmsg }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Age</th>
+                  <td>{{ pendingDetails.age }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Action</th>
+                  <td><span style="margin-right:  5px;  cursor: no-drop;"  (click)="processDecision(pendingDetails.id, 'reject')"  class="badge bg-danger  font-size-20">Refuse</span>   <span  style="cursor: cell;" (click)="processDecision(pendingDetails.id, 'accept')" class="badge bg-success font-size-20">Accept</span></td>
+                </tr>
+              </tbody>
+              <tbody *ngIf="!pendingDetails">
+                <tr>
+                  <td colspan="2" class="text-center">No Data Founded...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

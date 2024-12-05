@@ -1,0 +1,49 @@
+/* Adjustments for layout */
+.container.mt-5 {
+  padding-bottom: 100px;  /* Prevent footer overlap */
+}
+
+/* Form fields and inputs in a grid layout */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.col-md-6 {
+  flex: 0 0 48%;
+}
+
+/* Ensuring spacing for each form field */
+.mb-3 {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.form-control {
+  padding: 10px;
+}
+
+/* Button styles */
+.btn-success, .btn-secondary {
+  padding: 10px 20px;
+  margin: 10px 5px;
+}
+
+/* Card styling */
+.card-body {
+  padding: 20px;
+}
+
+.card {
+  margin-bottom: 30px;
+}
+
+/* Margin adjustments */
+body {
+  margin-top: 50px;
+}

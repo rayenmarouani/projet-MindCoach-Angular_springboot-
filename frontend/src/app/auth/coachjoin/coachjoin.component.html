@@ -1,0 +1,229 @@
+<div class="account-pages my-5 pt-sm-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="card shadow-lg border-0">
+          <!-- Header Section -->
+          <div class="bg-primary bg-soft p-4 text-center rounded-top">
+            <h2 class="text-primary mb-2">Join as a Coach</h2>
+            <p class="text-muted">
+              Become part of our MindCoach community and inspire others to achieve their goals.
+            </p>
+          </div>
+
+          <div class="card-body">
+            <div class="text-center">
+              <img
+                src="assets/images/coach-illustration.png"
+                alt="Coach"
+                class="img-fluid my-4"
+                style="max-width: 200px;"
+              />
+            </div>
+
+            <!-- Coach Benefits Section -->
+            <div class="mb-4">
+              <h5 class="text-primary">Why Join Us?</h5>
+              <ul class="list-unstyled">
+                <li class="mb-3">
+                  <i class="mdi mdi-check-circle text-success"></i> Access to a large client base ready to grow.
+                </li>
+                <li class="mb-3">
+                  <i class="mdi mdi-check-circle text-success"></i> Flexible scheduling tailored to your needs.
+                </li>
+                <li class="mb-3">
+                  <i class="mdi mdi-check-circle text-success"></i> Tools to manage your coaching sessions efficiently.
+                </li>
+                <li class="mb-3">
+                  <i class="mdi mdi-check-circle text-success"></i> Growth opportunities and community support.
+                </li>
+              </ul>
+            </div>
+
+            <!-- Registration Form Section -->
+            <div>
+              <h5 class="text-primary">Sign Up as a Coach</h5>
+              <form
+                [formGroup]="coachRequest"
+                (ngSubmit)="send()"
+                class="needs-validation"
+              >
+                <div class="row">
+                  <!-- Name -->
+                  <div class="col-md-6 mb-3">
+                    <label for="Name" class="form-label">Name</label>
+                    <input
+                      type="text"
+                      [ngClass]="{ 'is-invalid': coachRequest.controls['name'].invalid && coachRequest.controls['name'].touched }"
+                      formControlName="name"
+                      class="form-control"
+                      required
+                    />
+                    <div class="invalid-feedback">Please Enter Your Name</div>
+                  </div>
+
+                  <!-- Last Name -->
+                  <div class="col-md-6 mb-3">
+                    <label for="LastName" class="form-label">Last Name</label>
+                    <input
+                      type="text"
+                      [ngClass]="{ 'is-invalid': coachRequest.controls['prenom'].invalid && coachRequest.controls['prenom'].touched }"
+                      formControlName="prenom"
+                      class="form-control"
+                      required
+                    />
+                    <div class="invalid-feedback">Please Enter Your Last Name</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <!-- Username -->
+                  <div class="col-md-6 mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input
+                      type="text"
+                      [ngClass]="{ 'is-invalid': coachRequest.controls['username'].invalid && coachRequest.controls['username'].touched }"
+                      formControlName="username"
+                      class="form-control"
+                      required
+                    />
+                    <div class="invalid-feedback">Please Enter Your Username</div>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="col-md-6 mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input
+                      type="email"
+                      [ngClass]="{ 'is-invalid': coachRequest.controls['email'].invalid && coachRequest.controls['email'].touched }"
+                      formControlName="email"
+                      class="form-control"
+                      required
+                    />
+                    <div class="invalid-feedback">Please Enter a Valid Email</div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <!-- Password -->
+                  <div class="col-md-6 mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input
+                      type="password"
+                      [ngClass]="{ 'is-invalid': coachRequest.controls['password'].invalid && coachRequest.controls['password'].touched }"
+                      formControlName="password"
+                      class="form-control"
+                      required
+                    />
+                    <div class="invalid-feedback">Please Enter a Password</div>
+                  </div>
+
+                  <!-- Phone Number -->
+                  <div class="col-md-6 mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input
+                      type="text"
+                      [ngClass]="{ 'is-invalid': coachRequest.controls['nbTel'].invalid && coachRequest.controls['nbTel'].touched }"
+                      formControlName="nbTel"
+                      class="form-control"
+                      required
+                    />
+                    <div class="invalid-feedback">Please Enter a Phone Number</div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <!-- Age -->
+                  <div class="col-md-6 mb-3">
+                    <label for="age" class="form-label">Age</label>
+                    <input
+                      type="number"
+                      [ngClass]="{ 'is-invalid': coachRequest.controls['age'].invalid && coachRequest.controls['age'].touched }"
+                      formControlName="age"
+                      class="form-control"
+                      required
+                    />
+                    <div class="invalid-feedback">Please Enter Your Age</div>
+                  </div>
+
+                  <!-- Expertise -->
+                  <div class="col-md-6 mb-3">
+                    <label for="expertise" class="form-label">Expertise</label>
+                    <input
+                      type="text"
+                      [ngClass]="{ 'is-invalid': coachRequest.controls['expertise'].invalid && coachRequest.controls['expertise'].touched }"
+                      formControlName="expertise"
+                      class="form-control"
+                      required
+                    />
+                    <div class="invalid-feedback">Please Enter Your Expertise</div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <!-- Experience -->
+                  <div class="col-md-6 mb-3">
+                    <label for="Experience" class="form-label">Years Of Experience</label>
+                    <input
+                      type="number"
+                      [ngClass]="{ 'is-invalid': coachRequest.controls['yearsOfExperience'].invalid && coachRequest.controls['yearsOfExperience'].touched }"
+                      formControlName="yearsOfExperience"
+                      class="form-control"
+                      required
+                    />
+                    <div class="invalid-feedback">Please Enter Your Years Of Experience</div>
+                  </div>
+
+                  <!-- Qualifications -->
+                  <div class="col-md-6 mb-3">
+                    <label for="qualifications" class="form-label">Qualifications</label>
+                    <input
+                      type="text"
+                      [ngClass]="{ 'is-invalid': coachRequest.controls['qualifications'].invalid && coachRequest.controls['qualifications'].touched }"
+                      formControlName="qualifications"
+                      class="form-control"
+                      required
+                    />
+                    <div class="invalid-feedback">Please Enter Your Qualifications</div>
+                  </div>
+                
+                </div>
+
+                <!-- Motivational Message -->
+                <div class="mb-3">
+                  <label for="message" class="form-label">Why Do You Want to Join?</label>
+                  <textarea
+                    [ngClass]="{ 'is-invalid': coachRequest.controls['motivationmsg'].invalid && coachRequest.controls['motivationmsg'].touched }"
+                    formControlName="motivationmsg"
+                    class="form-control"
+                    rows="3"
+                    required
+                  ></textarea>
+                  <div class="invalid-feedback">Please Write a Motivational Message</div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="mt-4 d-grid">
+                  <button
+                    type="submit"
+                    [disabled]="coachRequest.invalid"
+                    class="btn btn-primary btn-lg"
+                  >
+                    Apply Now
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Footer Section -->
+            <div class="text-center mt-4">
+              <p class="text-muted">
+                Already have an account?
+                <a href="/login" class="text-primary">Login here</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

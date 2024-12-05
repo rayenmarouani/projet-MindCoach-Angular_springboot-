@@ -1,0 +1,113 @@
+<div class="account-pages my-5 pt-sm-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6 col-xl-5">
+        <div class="card overflow-hidden">
+          <div class="bg-primary bg-soft">
+            <div class="row">
+              <div class="col-7">
+                <div class="text-primary p-4">
+                  <h5 class="text-primary">Free Register</h5>
+                  <p>Get your MindCoach account now.</p>
+                </div>
+              </div>
+              <div class="col-5 align-self-end">
+                <img src="assets/images/profile-img.png" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="card-body pt-0">
+            <div>
+              <a href="index.html">
+                <div class="avatar-md profile-user-wid mb-4">
+                  <span class="avatar-title rounded-circle bg-light">
+                    <img src="assets/images/logo.svg" alt="" class="rounded-circle" height="34">
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            <div class="my-auto">
+              <div class="p-2">
+                <form class="needs-validation" novalidate (ngSubmit)="adduser()">
+                  <div hidden class="mb-3">
+                    <label for="userId" class="form-label">Id</label>
+                    <input type="text" [(ngModel)]="newUser.id" name="id" class="form-control">
+                  </div>
+
+                  <!-- Group Inputs (Username & Email) -->
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="username" class="form-label">Username</label>
+                      <input type="text" [(ngModel)]="newUser.username" name="username" class="form-control" required>
+                      <div class="invalid-feedback">Please Enter Username</div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" [(ngModel)]="newUser.email" name="email" class="form-control" required>
+                      <div class="invalid-feedback">Please Enter Email</div>
+                    </div>
+                  </div>
+
+                  <!-- Group Inputs (Password & Phone) -->
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="password" class="form-label">Password</label>
+                      <input type="password" [(ngModel)]="newUser.password" name="password" class="form-control" required>
+                      <div class="invalid-feedback">Please Enter Password</div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="nbTel" class="form-label">Telephone</label>
+                      <input type="text" [(ngModel)]="newUser.nbTel" name="nbTel" class="form-control" required>
+                      <div class="invalid-feedback">Please Enter Telephone</div>
+                    </div>
+                  </div>
+
+                  <!-- Group Inputs (Age & Role) -->
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="age" class="form-label">Age</label>
+                      <input type="number" [(ngModel)]="newUser.age" name="age" class="form-control" required>
+                      <div class="invalid-feedback">Please Enter Age</div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="role" class="form-label">Role</label>
+                      <select class="form-control" id="role" name="role" [(ngModel)]="newUser.role" required>
+                        <option value="">Select Role</option>
+                        <option value="User">User</option>
+                        <option value="Coach">Coach</option>
+                      </select>
+                      <div class="invalid-feedback">Please Select Your Role</div>
+                    </div>
+                  </div>
+
+                  <!-- Category Input (Visible only for Coaches) -->
+                  <div class="mb-3" *ngIf="newUser.role === 'Coach'">
+                    <label for="idCategorie" class="form-label">Category</label>
+                    <select class="form-control form-control-lg" id="idCategorie" name="idCategorie" [(ngModel)]="newIdCat" required>
+                      <option value="">Select Category</option>
+                      <option *ngFor="let cat of categories" [value]="cat.idCategorie">
+                        {{ cat.nomCategorie }}
+                      </option>
+                    </select>
+                    <div class="invalid-feedback">Choose your coaching domain</div>
+                  </div>
+
+                  <!-- Register Button -->
+                  <div class="mt-4 d-grid">
+                    <button class="btn btn-primary" type="submit">Register</button>
+                  </div>
+
+                  <!-- Join as a Coach Section -->
+                  <div class="text-center mt-3">
+                    <p>Want to become a coach? <a href="/join-coach" class="text-primary">Learn more here</a>.</p>
+                  </div>
+                </form>
+              </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

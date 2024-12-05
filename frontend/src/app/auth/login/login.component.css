@@ -1,0 +1,11 @@
+.text-primary {
+  cursor: pointer; /* Ensures the element is clickable */
+  text-decoration: underline; /* Optional: Visual cue for links */
+}
+
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+

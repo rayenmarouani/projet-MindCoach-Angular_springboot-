@@ -1,0 +1,61 @@
+<div style="margin-top: 80px;">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <div class="card shadow-lg rounded" style="background: linear-gradient(135deg, #f5f7fa, #ffffff);">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead class="table-light">
+                <tr>
+                  <th colspan="2" class="text-center">Client Details</th>
+                </tr>
+              </thead>
+              <tbody *ngIf="userDetails">
+                <tr>
+                  <th scope="row">ID</th>
+                  <td>{{ userDetails.id }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Username</th>
+                  <td>{{ userDetails.username }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Password</th>
+                  <td>{{ userDetails.password }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Email</th>
+                  <td>{{ userDetails.email }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Phone</th>
+                  <td>(+216) {{ userDetails.nbTel }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Age</th>
+                  <td>{{ userDetails.age }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Role</th>
+                  <td>{{ userDetails.role }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Category Coaching</th>
+                  <td>{{ userDetails.categorie.nomCategorie }}</td>
+                </tr>
+              </tbody>
+              <tbody *ngIf="!userDetails">
+                <tr>
+                  <td colspan="2" class="text-center">No Data Found...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer text-center">
+          <button class="btn btn-primary" routerLink="/dashboard/clients">Back to Dashboard</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

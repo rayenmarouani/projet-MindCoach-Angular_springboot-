@@ -1,0 +1,74 @@
+<div style="margin-top: 150px;">
+<div class="container mt-5" style="margin-top: 150px;">
+  <div class="card shadow-lg">
+    <div class="card-header bg-primary text-white">
+      <h4 class="mb-0 text-center">Update Coach Information</h4>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" [formGroup]="updateCoachForm">
+        <div class="row">
+          <!-- Full Name -->
+          <div class="col-md-6 mb-3">
+            <label for="username" class="form-label">Full Name</label>
+            <input
+              id="username"
+              type="text"
+              [ngModel]="coachDetails.username"
+              class="form-control"
+              formControlName="username"
+              placeholder="Enter coach's full name"
+            />
+          </div>
+
+          <!-- Email -->
+          <div class="col-md-6 mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              id="email"
+              type="email"
+              class="form-control"
+              formControlName="email"
+              [ngModel]="coachDetails.email"
+              placeholder="Enter coach's email"
+            />
+          </div>
+
+          <!-- Phone Number -->
+          <div class="col-md-6 mb-3">
+            <label for="nbTel" class="form-label">Phone Number</label>
+            <input
+              id="nbTel"
+              type="text"
+              class="form-control"
+              formControlName="nbTel"
+              [ngModel]="coachDetails.nbTel"
+              placeholder="Enter coach's phone number"
+            />
+          </div>
+
+          <!-- Expertise -->
+          <div class="col-md-6 mb-3">
+            <label for="expertise" class="form-label">Expertise</label>
+            <input
+              id="expertise"
+              type="text"
+              class="form-control"
+              formControlName="expertise"
+              [ngModel]="coachDetails.expertise"
+              placeholder="Enter coach's expertise"
+            />
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="text-center mt-4">
+          <button type="submit" class="btn btn-success px-4" [disabled]="updateCoachForm.invalid">
+            Update Coach
+          </button>
+          <button type="button" class="btn btn-secondary px-4" (click)="cancelUpdate()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>

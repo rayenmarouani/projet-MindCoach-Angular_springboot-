@@ -1,0 +1,71 @@
+<div style="margin-top: 80px;">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered text-center">
+              <thead class="table-light">
+                <tr>
+                  <th colspan="2" class="text-center">Coach Details</th>
+                </tr>
+              </thead>
+              <tbody *ngIf="coachDetails">
+                <tr>
+                  <th scope="row">ID</th>
+                  <td>{{ coachDetails.id }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Fullname</th>
+                  <td>{{ coachDetails.username }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Email</th>
+                  <td>{{ coachDetails.email }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Phone</th>
+                  <td>{{ coachDetails.nbTel }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Expertise</th>
+                  <td>{{ coachDetails.expertise }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Years of Experience</th>
+                  <td>{{ coachDetails.yearsOfExperience }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Qualifications</th>
+                  <td>{{ coachDetails.qualifications }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Motivation Message</th>
+                  <td>{{ coachDetails.motivationmsg }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Age</th>
+                  <td>{{ coachDetails.age }}</td>
+                </tr>
+              </tbody>
+
+              <tbody *ngIf="!coachDetails">
+                <tr>
+                  <td colspan="2" class="text-center">No Data Found...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Back to Dashboard Button -->
+          <div class="d-flex justify-content-center mt-4">
+            <button class="btn btn-primary btn-lg"  routerLink="/dashboard/coachs">
+              Back to Dashboard
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

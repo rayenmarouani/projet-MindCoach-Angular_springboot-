@@ -1,0 +1,102 @@
+<div class="page-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+          <h4 class="mb-sm-0 font-size-18">Update Account</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-body">
+
+            <form>
+              <!-- ID -->
+              <div class="row mb-4">
+                <label for="id" class="col-form-label col-lg-2">ID</label>
+                <div class="col-lg-10">
+                  <input id="id" name="id" readonly type="text" [(ngModel)]="currentUser.id" class="form-control m-2" placeholder="Enter ID">
+                </div>
+              </div>
+
+              <!-- Username -->
+              <div class="row mb-4">
+                <label for="username" class="col-form-label col-lg-2">Username</label>
+                <div class="col-lg-10">
+                  <input id="username" name="username" type="text" [(ngModel)]="currentUser.username" class="form-control m-2" placeholder="Enter Username">
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="row mb-4">
+                <label for="email" class="col-form-label col-lg-2">Email</label>
+                <div class="col-lg-10">
+                  <input id="email" name="email" type="text" [(ngModel)]="currentUser.email" class="form-control m-2" placeholder="Enter Email">
+                </div>
+              </div>
+
+              <!-- Password -->
+              <div class="row mb-4">
+                <label for="password" class="col-form-label col-lg-2">Password</label>
+                <div class="col-lg-10">
+                  <input id="password" name="password" type="text" [(ngModel)]="currentUser.password" class="form-control m-2" placeholder="Enter Password">
+                </div>
+              </div>
+
+              <!-- Telephone -->
+              <div class="row mb-4">
+                <label for="telephone" class="col-form-label col-lg-2">Telephone</label>
+                <div class="col-lg-10">
+                  <input id="telephone" name="nbTel" type="text" [(ngModel)]="currentUser.nbTel" class="form-control m-2" placeholder="Enter Telephone">
+                </div>
+              </div>
+
+              <!-- Age -->
+              <div class="row mb-4">
+                <label for="age" class="col-form-label col-lg-2">Age</label>
+                <div class="col-lg-10">
+                  <input id="age" name="age" type="text" [(ngModel)]="currentUser.age" class="form-control m-2" placeholder="Enter Age">
+                </div>
+              </div>
+
+              <!-- Role -->
+              <div class="row mb-4">
+                <label for="role" class="col-form-label col-lg-2">Role</label>
+                <div class="col-lg-10">
+                  <select id="role" name="role" [(ngModel)]="currentUser.role" class="form-control m-2">
+                    <option value="">Select Role</option>
+                    <option value="User">User</option>
+                    <option value="Coach">Coach</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Category -->
+              <div class="row mb-4">
+                <label for="category" class="col-form-label col-lg-2">Category</label>
+                <div class="col-lg-10">
+                  <select id="category" name="idCat" [(ngModel)]="updatedCatId" class="form-control m-2">
+                    <option *ngFor="let cat of categories" [value]="cat.idCategorie">{{ cat.nomCategorie }}</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="row justify-content-end">
+                <div class="col-lg-10">
+                  <button  type="button" class="btn btn-primary" (click)="Modifie()">Update</button>
+                </div>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
