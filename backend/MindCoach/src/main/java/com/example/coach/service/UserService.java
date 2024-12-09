@@ -7,6 +7,8 @@ import com.example.coach.entity.User;
 import com.example.coach.entity.UserDTO;
 
 
+
+
 public interface UserService {
 	UserDTO saveUser(UserDTO u);
 	UserDTO updateUser(UserDTO u);

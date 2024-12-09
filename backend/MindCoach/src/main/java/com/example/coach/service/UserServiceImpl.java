@@ -10,11 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.example.coach.entity.Categorie;
-import com.example.coach.entity.User;
 import com.example.coach.entity.UserDTO;
-import com.example.coach.repo.CategoryRepository;
 import com.example.coach.repo.UserRepository;
+
 
 
 

@@ -13,9 +13,7 @@ import lombok.NoArgsConstructor;
 public class UserDTO {
 	
 	
-	public UserDTO() {
-	    // No-argument constructor
-	}
+	
     private Long id;
     private String username; // Ensure this field is declared
     private String email;
